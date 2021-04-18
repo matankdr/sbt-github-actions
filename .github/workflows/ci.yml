@@ -23,7 +23,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
         scala: [2.12.10]
-        java: [adopt@1.8]
+        java: [adopt@1.11]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Ignore line ending differences in git
@@ -85,7 +85,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         scala: [2.12.10]
-        java: [adopt@1.8]
+        java: [adopt@1.11]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Ignore line ending differences in git

@@ -46,6 +46,7 @@ enablePlugins(SbtPlugin)
 scriptedLaunchOpts ++= Seq("-Dplugin.version=" + version.value)
 scriptedBufferLog := true
 
+ThisBuild / githubWorkflowJavaVersions := Seq("adopt@1.11")
 ThisBuild / githubWorkflowBuildPostamble := Seq(
   WorkflowStep.Sbt(List("clean", "coverage", "test", "coverageReport")),
   WorkflowStep.Use(
