@@ -45,3 +45,13 @@ enablePlugins(SbtPlugin)
 
 scriptedLaunchOpts ++= Seq("-Dplugin.version=" + version.value)
 scriptedBufferLog := true
+
+ThisBuild / githubWorkflowBuildPostamble := Seq(
+  WorkflowStep.Sbt(List("clean", "coverage", "test", "coverageReport")),
+  WorkflowStep.Use(
+    owner = "codecov",
+    repo = "codecov-action",
+    ref = "v1",
+    params = Map("token" -> "24afb267-5cad-4d89-8a32-691f10ba4797")
+  )
+)

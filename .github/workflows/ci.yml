@@ -60,6 +60,13 @@ jobs:
       - shell: bash
         run: sbt ++${{ matrix.scala }} test scripted
 
+      - shell: bash
+        run: sbt ++${{ matrix.scala }} clean coverage test coverageReport
+
+      - uses: codecov/codecov-action@v1
+        with:
+          token: 24afb267-5cad-4d89-8a32-691f10ba4797
+
       - name: Compress target directories
         shell: bash
         run: tar cf targets.tar target project/target
