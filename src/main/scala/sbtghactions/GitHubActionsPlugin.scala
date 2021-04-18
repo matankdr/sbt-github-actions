@@ -28,6 +28,8 @@ object GitHubActionsPlugin extends AutoPlugin {
    *
    * @return
    */
+  def myCoolFunc(x: Int) = {}
+  
   override def requires = plugins.JvmPlugin
   override def trigger = allRequirements
 
