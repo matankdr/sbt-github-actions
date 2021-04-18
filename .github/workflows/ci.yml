@@ -65,7 +65,7 @@ jobs:
 
       - uses: codecov/codecov-action@v1
         with:
-          token: 24afb267-5cad-4d89-8a32-691f10ba4797
+          token: 04610c6c-976e-4dc0-9fac-a90f4fb46e8d
 
       - name: Compress target directories
         shell: bash
