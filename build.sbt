@@ -53,6 +53,9 @@ ThisBuild / githubWorkflowBuildPostamble := Seq(
     owner = "codecov",
     repo = "codecov-action",
     ref = "v1",
-    params = Map("token" -> "04610c6c-976e-4dc0-9fac-a90f4fb46e8d")
+    params = Map(
+      "token" -> "04610c6c-976e-4dc0-9fac-a90f4fb46e8d",
+      "verbose" -> "true"
+    )
   )
 )
