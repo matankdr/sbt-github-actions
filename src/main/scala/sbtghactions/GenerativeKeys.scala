@@ -19,7 +19,7 @@ package sbtghactions
 import sbt._
 
 trait GenerativeKeys {
-
+ // comment
   lazy val githubWorkflowGenerate = taskKey[Unit]("Generates (and overwrites if extant) a ci.yml and clean.yml actions description according to configuration")
   lazy val githubWorkflowCheck = taskKey[Unit]("Checks to see if the ci.yml and clean.yml files are equivalent to what would be generated and errors if otherwise")
 
