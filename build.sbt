@@ -39,6 +39,8 @@ sbtVersion := "1.3.8"
 
 scalacOptions += "-Xlint:_,-missing-interpolator"
 
+// comment
+
 libraryDependencies += "org.specs2" %% "specs2-core" % "4.8.3" % Test
 
 enablePlugins(SbtPlugin)
