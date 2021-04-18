@@ -24,7 +24,10 @@ import org.yaml.snakeyaml.Yaml
 import scala.collection.JavaConverters._
 
 object GitHubActionsPlugin extends AutoPlugin {
-
+  /**
+   *
+   * @return
+   */
   override def requires = plugins.JvmPlugin
   override def trigger = allRequirements
 
